@@ -72,19 +72,22 @@
                                 $Instancia2=new TSP_Dynamic_Programming();
                                 $Instancia3=new TSP_FuerzaBruta();
                                 //$InstanciaI->ImprimirArray($Array);
-
+                                $start = microtime(true);
+                                $Instancia3->CalcularPorFuerzaBruta($Array);
+                                $end = microtime(true);
+                                $time = $end-$start;
+                                $time = number_format($time, 5);
+                                echo '<br>'.'Tiempo de Ejecucion: '.$time.' Segundos';
+                                echo '<br><br>';
                                 //Obtener ruta y medir tiempo
                                 $start = microtime(true);
                                 $Instancia2->CalcularPorProgramacionDinamica($Array);
                                 $end = microtime(true);
                                 $time = $end-$start;
-                                echo '<br>'."execute time {$time}".'Segundos';
+                                $time = number_format($time, 5);
+                                echo '<br>'.'Tiempo de Ejecucion: '.$time.' Segundos';
                                 
-                                $start2 = microtime(true);
-                                $Instancia3->CalcularPorFuerzaBruta($Array);
-                                $end2 = microtime(true);
-                                $time = $end2-$start2;
-                                echo '<br>'."execute time {$time}".'Segundos';
+                                
 
                                 ?>
                             </tbody>
