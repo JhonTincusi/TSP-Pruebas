@@ -26,7 +26,7 @@
                         
                             <label for="formFile" class="form-label">Ingresar matriz de distancias</label>
                             <input class="form-control mb-3" name="MatrizDeDistancias" type="file" id="formFile">
-                            <input type="submit" class="btn btn-primary" value="Cargar Archivos">
+                            <input type="submit" class="btn btn-primary" value="Cargar Archivo">
                     </form>
                 </div>
             </div>
